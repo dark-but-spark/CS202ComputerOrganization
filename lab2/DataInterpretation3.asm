@@ -1,17 +1,15 @@
 .include "macro_print_str.asm"
 .data
+    tdata:.word 0xffffffff
 .text 
 main:
-    print_string("\n -1 is less than 1 using slt:")
-    li t0,-1
-    li t1,1 
-    slt a0,t0,t1
+    lw a0,tdata
     li a7,1
-    ecall
+    ecall 
 
-    print_string("\n -1 is less than 1 using sltu:")
-    sltu a0,t0,t1
-    li a7,1
+    print_string("\n")
+    lw a0,tdata
+    li a7,36
     ecall
-    
+    li a7,10
     end

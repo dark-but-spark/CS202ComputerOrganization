@@ -13,5 +13,6 @@ main:
     sltu a0,t0,t1
     li a7,1
     ecall
-    
+    li a7,10
+    ecall
     end
