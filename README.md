@@ -7,13 +7,19 @@
 
 ---
 
-rars是用Java做成的risc-v的模拟器 ~~but有时不能保存程序~~ 也可以把代码转换成bit文件
+##### rars
+是用Java做成的risc-v的模拟器 ~~but有时不能保存程序~~ 也可以把代码转换成bit文件
 
 .text->inst.txt .data->dmem.txt(注意要用Hexadecimal Text)
 
+打开代码时 进入文件夹后要刷新一下
 
-GenUBit.bat能将inst.txt和dmem.txt（同目录下）转换为out.txt
 
-UartAssist是串口发射 发射out.txt
+##### GenUBit.bat
+能将inst.txt和dmem.txt（同目录下）转换为out.txt
 
-a_tailed_risc-v_CPU_CSE.bit是芯片ego1的配置data
+##### UartAssist
+是串口发射 发射out.txt
+
+##### a_tailed_risc-v_CPU_CSE.bit
+是芯片ego1的配置data
