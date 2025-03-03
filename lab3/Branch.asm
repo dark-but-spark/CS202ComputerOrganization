@@ -1,6 +1,6 @@
 .include "macro_print_str.asm"
 .text
-    print_string("Please input your score\n");
+    print_string("Please input your score\n")
     li a7,5
     ecall
     mv t0,a0

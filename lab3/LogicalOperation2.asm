@@ -5,7 +5,7 @@
     lw a0,devalue1
     li a7,34
     ecall
-    #0x87654321
+    #out: 0x87654321
     
     mv t1,a0
     slli t2,t1,16
@@ -16,7 +16,7 @@
     mv a0,t1
     li a7,34
     ecall
-    #0x43218765
+    #out: 0x43218765
 
     li a7,10
     ecall

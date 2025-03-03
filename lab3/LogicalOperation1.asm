@@ -18,5 +18,7 @@
 
     li a7,10
     ecall
-    
+
+#rem(a,b) is a function that returns the remainder of a divided by b.
+#when b is 2^n, rem(a,b) is equivalent to a & (b-1).
 
