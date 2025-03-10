@@ -27,4 +27,6 @@
         blt a1,a4,for_i
     li a7,10
     ecall
+# This program prints a multiplication table from 1 to 9.
+
         
