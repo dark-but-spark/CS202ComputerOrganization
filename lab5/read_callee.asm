@@ -1,6 +1,6 @@
 .data 
-    # .extern read_str 20
-    read_str: .space 20
+    .extern read_str 20
+    # read_str: .space 20
     str_callee: .asciz"\nIn Callee\n"
 .text
 read_callee:
@@ -9,3 +9,5 @@ read_callee:
  ecall
  la a0,read_str
  ecall
+ jr ra   # jump to ra
+ 
