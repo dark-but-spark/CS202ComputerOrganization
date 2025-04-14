@@ -1,0 +1,8 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+E:/CS202ComputerOrganization/lab9/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+E:/CS202ComputerOrganization/lab9/project_1/project_1.srcs/sim_1/new/tb_dmem.v,1744618880,verilog,,,,tb_dmem,,,,,,,,
+E:/CS202ComputerOrganization/lab9/project_1/project_1.srcs/sources_1/ip/RAM/sim/RAM.v,1744617021,verilog,,E:/CS202ComputerOrganization/lab9/project_1/project_1.srcs/sources_1/new/DMem.v,,RAM,,,,,,,,
+E:/CS202ComputerOrganization/lab9/project_1/project_1.srcs/sources_1/new/DMem.v,1744618570,verilog,,E:/CS202ComputerOrganization/lab9/project_1/project_1.srcs/sim_1/new/tb_dmem.v,,DMem,,,,,,,,
