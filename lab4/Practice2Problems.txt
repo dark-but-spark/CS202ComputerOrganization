@@ -1,70 +1,24 @@
-.include "macro_print_str.asm"
-.data 
-    min:.word 0
-.text 
-    print_string("input the number: ")
-    li a7,5
-    ecall
-    mv t0,a0
-    slli a0,t0,2
-    li a7,9 # allocate space for 4 integers
-    ecall
-    mv t1,a0
-    mv t2,a0
-    print_string("input the array:\n")
-    add t3,zero,zero
-    loop_read:
-        li a7,5
-        ecall 
-        sw a0,(t2)
-        addi t2,t2,4
-        addi t3,t3,1
-        blt t3,t0,loop_read
-    lw a0,(t1)
-    la t4,min
-    add t3,zero,zero
-    add t2,t1,zero
-    loop_find:
-        lw a0,min
-        lw a1,(t2)
-        jal find
-        la t4,min
-        sw a0,(t4)
-        addi t2,t2,4
-        addi t3,t3,1
-        blt t3,t0,loop_find
-    print_string("the min is:")
-    li a7,1
-    la t4,min
-    lw a0,(t4)
-    ecall
-    li a7,10
-    ecall
-find:
-    blt a0,a1,return
-    mv a0,a1
-return:
-    jr ra
 #Q1-1. 执行编号为9的系统调用后，寄存器 a0 的值是多少？
 #Q1-1. What’s the value of register a0 after finish executing the system call numbered 9?（answer in hexdecimal） 
 # 请在下一行以十六进制的方式回答（比如value是十六进制的0x12345678,则填写12345678), Please reply in hexadecimal format in the next line (if the value is hexadecimal 0x12345678, then fill in 12345678) 
-
-#Q1-2. 执行编号为9的系统调用后，寄存器 a0值是否与寄存器 sp 的值相同？
+10040000
+#Q1-2. 执行编号为9的系统调用后，寄存器 a0值是否与寄存器 sp 的值相2同？
 #Q1-2. After executing the system call numbered 9, is the value of register a0 the same as the value of register sp?
 #请在下一行填写Y/N（如果答案为“是”填写Y，如果答案为“否”填写N）, Please fill in Y or N in the next line （if answer is yes then fill in Y，else fill in N）
-
+N
 #Q2-1. 输入数据存储在内存中的静态存储区域还是动态存储区域？
 #Q2-1. On which regin are the input data stored in memory,Static storage area or Dynamic storage area(S/D)? 
 #请在下一行填写S/D（如果答案为“静态存储区域”填写S，如果答案为“动态存储区域”填写D）, Please fill in S or D in the next line （if answer is Static storage area then fill in S，if answer is Dynamic storage area then fill in D）
-
+D
 #Q2-2. 输入数据存储在内存中的栈区还是堆区? 栈区填S，堆区填H
 #Q2-2. Is the input data stored in stack or heap(S/H)?
 # 请在下一行填写S/H（如果答案为“栈区”填写S，如果答案为“堆区”填写H）, Please fill in S or H in the next line（if answer is Stack then fill in S，if answer is Heap fill then fill in H） 
-
+H
 #Q3. 内存中单独存放的最小值数据（该数据存储在标签为“min_value”的存储区域）存储在静态存储区域还是动态存储区域？
 #On which regin are the min_value data（the lable of which is "min_value"） stored in memory,Static storage area or Dynamic storage area(S/D)? 
 #请在下一行填写S/D（如果答案为“静态存储区域”填写S，如果答案为“动态存储区域”填写D）, Please fill in S or D in the next line （if answer is Static storage area then fill in S，if answer is Dynamic storage area then fill in D）
-
+S 
 #Q4. 如果第一个输入数字是 0（表示整数数量），会发生什么情况？（运行正常/重大隐患）
 #Q4. What will happen if the first input number is 0 (indicating the number of integers)? (Normal operation/with significant hidden dangers)
 #请在下一行填写N/D(如果答案为“运行正常”填写N，如果答案为“重大隐患”填写D), Please fill in N or D in the next line(if answer is "Normally operation" then fill in N, if answer is "with significant hidden Dangers" then fill in D)
+D

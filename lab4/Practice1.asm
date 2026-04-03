@@ -1,8 +1,7 @@
-.include "macro_print_str.asm"
+
 .data
 .text
 main:
-    print_string("Enter a number: ")
     li a7,5
     ecall
     jal function
